@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/** リセット */
+
+*{
+    font-family: 'メイリオ', Meiryo,'Arial','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
+    margin: 0;
+    padding: 0;
+    vertical-align: bottom;
+    list-style: none;
+    text-decoration: none;
+}
+
+a{
+    color: #000;
+}
+/** リセットEnd */
