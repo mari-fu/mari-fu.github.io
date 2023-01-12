@@ -9,6 +9,267 @@
     vertical-align: bottom;
     list-style: none;
     text-decoration: none;
+    color: #555;
+}
+
+img{
+    vertical-align: bottom;
 }
 
 /** リセットEnd */
+
+/** 481px以下　スマホ用（スマホファースト）*/
+
+/** header */
+header a{
+    color: #FFF;
+}
+
+h1{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 15px;
+}
+.top_font{
+    font-size: 80%;
+    color: #FFF;
+}
+nav ul{
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    text-align: right;
+}
+nav ul li{
+    margin-top: 15%;
+    font-weight: bold;
+}
+header p{
+    position: absolute;
+    bottom: 10%;
+    color: #DDD;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+header img{
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+/** header End */
+
+/** main */
+/** menu */
+#menu_button{
+
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    background-color: #555;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+#menu_button a{
+    color: #FFF;
+    padding-top: 30%;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 50%;
+}
+#menu_list{
+    display: none;
+    position: fixed;
+    width: 210px;
+    bottom: 13%;
+    right: 2%;
+    background-color: #444;
+}
+#menu_list ul li{
+    padding-right: 5%;
+}
+#menu_list a{
+    width: 100%;
+    padding-top: 10%;
+    display: block;
+    text-align: right;
+    color: #FFF;
+}
+
+/** menu End */
+
+/** index.html */
+
+h2{
+    margin-top: 20%;
+    text-align: center;
+    font-size: 120%;
+}
+h3, h4{
+    margin-top: 25%;
+    text-align: center;
+    font-size: 120%;
+}
+.describe{
+    width: 85%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about_us_left img{
+    max-width: 40vw;
+    float: left;
+    margin-top: 25%;
+    margin-left: 5vw;
+    margin-bottom: 20%;
+}
+.about_us_right img{
+    max-width: 45vw;
+    float: right;
+    margin-top: 10%;
+    margin-right: 5vw;
+}
+
+/** 登録講習機関とは */
+
+#about_registraition_agencies h3{
+    clear: both;
+}
+/** 講習使用機体（全講習共通） */
+
+#about_aircraft img{
+    max-width: 40vw;
+    float: right;
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-bottom: 20%;
+}
+/** 操縦ライセンス取得には */
+#about_license_acquisition h3{
+    clear: right;
+}
+
+#about_license_acquisition img{
+    max-width: 40vw;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+/** アクセス */
+#address{
+    margin-bottom: 20%;
+}
+#address p{
+    width: 
+    275px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#address .googlemap a{
+    font-weight: bold;
+    color: #999;
+}
+#address .tel{
+    margin-top: 10%;
+    text-align: center;
+}
+
+/** index.html End */
+
+/** index.html以外共通 */
+.pc_block{
+    display: none;
+}
+/** index.html以外共通 End */
+
+/** license.html */
+#license_type{
+    width: 80%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#license_type li{
+    font-weight: bold;
+    margin-top: 5%;
+}
+#license_type ol li{
+    font-weight: normal;
+}
+#permit_approval h4{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 100%;
+}
+#permit_approval table{
+    width: 90%;
+    font-size: 80%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#permit_approval table, #permit_approval th, #permit_approval td{
+    border: solid #000 2px;
+}
+#permit_approval p{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 80%;
+}
+.describe a{
+    color: #008;
+}
+
+#acquisiton_flow table{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    border: solid 1px #000;
+    font-size: 80%;
+}
+#acquisiton_flow table span{
+    font-size: 70%;
+}
+/** license.html End */
+
+/** main End */
+
+/** footer */
+#footer{
+    background-color: #555;
+}
+#footer p{
+    text-align: center;
+    color: #FFF;
+    bottom: 0;
+}
+#footer_top, #footer_nav{
+    display: none;
+}
+
+/** footer End */
+
+/** 481px以下　スマホ用 End */
+
+/** 481px以上960以下に適応　タブレット用*/
+@media screen and (min-width:481px) {
+
+    
+}
+/** 481px以上に適応　タブレット用 End */
+
+/** 960px以上に適応　PC用*/
+@media screen and (min-width:960px) {
+    
+    
+}
+/** 960px以上に適応　PC用 End */
+
