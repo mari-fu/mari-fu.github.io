@@ -18,9 +18,12 @@ img{
 
 /** リセットEnd */
 
-/** 481px以下　スマホ用（スマホファースト）*/
+/** スマホ用（スマホファースト）*/
 
 /** header */
+header{
+    height: 95vh;
+}
 header a{
     color: #FFF;
 }
@@ -29,10 +32,10 @@ h1{
     position: absolute;
     top: 10%;
     left: 10%;
-    font-size: 15px;
+    font-size: 18px;
 }
 .top_font{
-    font-size: 80%;
+    font-size: 14px;
     color: #FFF;
 }
 nav ul{
@@ -49,13 +52,15 @@ header p{
     position: absolute;
     bottom: 10%;
     color: #DDD;
-    font-size: 200%;
+    font-size: 36px;
     font-weight: bold;
 }
 
 header img{
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 90vh;
+    height: 95vh;
     object-fit: cover;
 }
 /** header End */
@@ -63,11 +68,10 @@ header img{
 /** main */
 /** menu */
 #menu_button{
-
     position: fixed;
     bottom: 3%;
     right: 3%;
-    background-color: #555;
+    background-color: #05D;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -102,17 +106,22 @@ header img{
 
 /** menu End */
 
-/** index.html */
 
+/** 各ページ共通 */
 h2{
+    margin-top: 30%;
+    text-align: center;
+    font-size: 18px;
+}
+h3{
     margin-top: 20%;
     text-align: center;
-    font-size: 120%;
+    font-size: 18px;
 }
-h3, h4{
-    margin-top: 25%;
+h4{
+    margin-top: 15%;
     text-align: center;
-    font-size: 120%;
+    font-size: 18px;
 }
 .describe{
     width: 85%;
@@ -120,24 +129,28 @@ h3, h4{
     margin-left: auto;
     margin-right: auto;
 }
+/** index.html */
+#about_us{
+    overflow: auto;
+}
+
 .about_us_left img{
-    max-width: 40vw;
     float: left;
-    margin-top: 25%;
-    margin-left: 5vw;
-    margin-bottom: 20%;
+    width: 35vw;
+    margin-top: 20%;
+    margin-left: 10%;
 }
 .about_us_right img{
-    max-width: 45vw;
     float: right;
+    width: 40vw;
     margin-top: 10%;
-    margin-right: 5vw;
+    margin-right: 10%;
 }
 
 /** 登録講習機関とは */
 
 #about_registraition_agencies h3{
-    clear: both;
+    clear: left;
 }
 /** 講習使用機体（全講習共通） */
 
@@ -145,7 +158,7 @@ h3, h4{
     max-width: 40vw;
     float: right;
     margin-top: 10%;
-    margin-right: 10%;
+    margin-right: 20%;
     margin-bottom: 20%;
 }
 /** 操縦ライセンス取得には */
@@ -156,7 +169,7 @@ h3, h4{
 #about_license_acquisition img{
     max-width: 40vw;
     margin-top: 10%;
-    margin-left: 10%;
+    margin-left: 20%;
 }
 
 /** アクセス */
@@ -164,8 +177,7 @@ h3, h4{
     margin-bottom: 20%;
 }
 #address p{
-    width: 
-    275px;
+    width: 275px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -204,11 +216,11 @@ h3, h4{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 100%;
+    font-size: 14px;
 }
 #permit_approval table{
     width: 90%;
-    font-size: 80%;
+    font-size: 12px;
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
@@ -221,29 +233,106 @@ h3, h4{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 80%;
+    font-size: 12px;
 }
 .describe a{
     color: #008;
 }
+#acquisiton_flow_figure{
+    text-align: center;
+    margin-top: 10%;
+}
+#acquisiton_flow img{
+    max-width: 95%;
+}
+/** license.html End */
 
-#acquisiton_flow table{
-    width: 95%;
+/** course_content.html */
+
+#implementation_method h4{
+    margin-bottom: 10%;
+}
+#implementation_method table{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#implementation_method .text_center{
+    text-align: center;
+}
+#class_time table, #class_time th, #class_time td{
+    border: solid 1px #000;
+    border-collapse: collapse;
+    text-align: center;
+}
+#class_time table{
+    width: 96%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10%;
+}
+#course_subject h4{
+    margin-bottom: 10%;
+}
+#course_subject ul{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#course_subject ol{
+    margin-left: 5%;
+}
+/** course_content.html End */
+
+/** course_fee.html */
+#experienced_person h3{
+    margin-bottom: 10%;
+}
+#experienced_person ul{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.attention{
+    background-color: #444;
+    color: #FFF;
+}
+#course_fee table{
+    font-size: 12px;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#course_fee table, #course_fee th, #course_fee td{
     border: solid 1px #000;
-    font-size: 80%;
+    border-collapse: collapse;
 }
-#acquisiton_flow table span{
-    font-size: 70%;
+#acquisition_cost table{
+    font-size: 12px;
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
 }
-/** license.html End */
+#acquisition_cost table, #acquisition_cost th, #acquisition_cost td{
+    border: solid 1px #000;
+    border-collapse: collapse;
+}
+#acquisition_cost p{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** course_fee.html End */
 
 /** main End */
 
 /** footer */
 #footer{
+    margin-top: 15%;
     background-color: #555;
 }
 #footer p{
@@ -257,19 +346,137 @@ h3, h4{
 
 /** footer End */
 
-/** 481px以下　スマホ用 End */
+/** 768px以下　スマホ用 End */
 
-/** 481px以上960以下に適応　タブレット用*/
-@media screen and (min-width:481px) {
+/** 768px以上960px以下に適応　タブレット用*/
+@media screen and (min-width:768px) {
+    /** header */
+    h1{
+        font-size: 24px;
+    }
+    .top_font{
+        font-size: 20px;
+    }
+    nav ul{
+        top: 30%;
+    }
+    nav ul li{
+        font-size: 20px;
+    }
+    header p{
+        font-size: 50px;
+    }
+    /** header End */
 
-    
+    /** 各ページ共通 */
+    h2{
+        font-size: 1.5em;
+    }
+    h3{
+        font-size: 1.5em;
+    }
+    h4{
+        font-size: 1.5em;
+    }
+    .describe{
+        width: 65%;
+        font-size: 1.2em;
+    }
+
+    /** menu */
+    #menu_button{
+        width: 80px;
+        height: 80px;
+    }
+    #menu_button a{
+        width: 80px;
+        height: 80px;
+        font-size: 1.2em;
+    }
+    /** menu End */
+
+    /** index.html */
+    a[href^="tel=:"]{
+        pointer-events: none;
+    }
+
+    /** index.html End */
+
+    /** license.html */
+    #license_type li{
+        font-size: 1.3em;
+    }
+    #license_type ol li{
+        font-size: 1.2em;
+    }
+    #permit_approval h4{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.1em;
+    }
+    #permit_approval table, #permit_approval p{
+        font-size: 1.1em;
+    }
+    /** license.html End */
+
+    /** course_content.html */
+    #implementation_method table{
+        width: 70%;
+        font-size: 1.2em;
+    }
+    #implementation_method table span{
+        font-size: 0.9em;
+    }
+    #class_time table{
+        width: 70%;
+        font-size: 1.2em;
+    }
+    #course_subject ul{
+        width: 65%;
+        font-size: 1.2em;
+    }
+    /** course_content.html End */
+
+    /** course_fee.html */
+    #experienced_person ul{
+        width: 76%;
+        font-size: 1.2em;
+    }
+    #course_fee table{
+        width: 80%;
+        font-size: 1.2em;
+    }
+    #acquisition_cost p{
+        width: 70%;
+    }
+    #course_fee table, #acquisition_cost table{
+        width: 70%;
+        font-size: 1.2em;
+    }
+    /** course_fee.html End */
 }
-/** 481px以上に適応　タブレット用 End */
+/** 768px以上に適応　タブレット用 End */
 
 /** 960px以上に適応　PC用*/
 @media screen and (min-width:960px) {
-    
-    
+    h1{
+        position: static;
+        z-index: 100000;
+    }
+    nav ul{
+        top:20px;
+
+    }
+    nav ul li{
+        float: left;
+        font-weight: normal;
+        font-size: 1em;
+    }
+    header img{
+        position: static;
+        z-index: 10;
+    }
 }
 /** 960px以上に適応　PC用 End */
 
