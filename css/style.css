@@ -21,10 +21,8 @@ img{
 /** スマホ用（スマホファースト）*/
 
 /** header */
-header{
-    height: 95vh;
-}
-header a{
+
+#top a{
     color: #FFF;
 }
 
@@ -34,7 +32,7 @@ h1{
     left: 10%;
     font-size: 18px;
 }
-.top_font{
+#top .top_font{
     font-size: 14px;
     color: #FFF;
 }
@@ -56,12 +54,12 @@ header p{
     font-weight: bold;
 }
 
-header img{
-    position: absolute;
-    top: 0;
-    width: 100%;
+#top{
+    background-image: url(../img/top_before.jpg);
+    background-size: cover;
+    background-position: center;
     height: 95vh;
-    object-fit: cover;
+
 }
 /** header End */
 
@@ -340,7 +338,7 @@ h4{
     color: #FFF;
     bottom: 0;
 }
-#footer_top, #footer_nav{
+.footer_top, .footer_nav{
     display: none;
 }
 
@@ -396,8 +394,15 @@ h4{
     /** menu End */
 
     /** index.html */
-    a[href^="tel=:"]{
-        pointer-events: none;
+    #address p{
+        width: 330px;
+    }
+
+    #address .tel{
+        font-size: 1.2em;
+    }
+    #address a[href^="tel:"] {
+        pointer-events:none;
     }
 
     /** index.html End */
@@ -460,23 +465,150 @@ h4{
 
 /** 960px以上に適応　PC用*/
 @media screen and (min-width:960px) {
+    .pc_block{
+        display: flex;
+        background-image: none;
+    }
+    .pc_block nav{
+        height: 40px;
+    }
+    #top{
+        height: 100vh;
+    }
+    header nav{
+        width: 959px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     h1{
         position: static;
-        z-index: 100000;
+        width: 19%;
+        float: left;
+        top: auto;
+        left: auto;
+        margin-top: 3%;
+        margin-left: 3%;
+        font-size: 1.1rem;
     }
-    nav ul{
-        top:20px;
 
+    nav ul{
+        position: static;
+        width: 78%;
+        float: right;
+        top: auto;
+        right: auto;
+        text-align: center;
     }
     nav ul li{
         float: left;
+        margin-left: 20px;
+        margin-top: 5%;
         font-weight: normal;
-        font-size: 1em;
+        font-size: 18px;
     }
-    header img{
-        position: static;
-        z-index: 10;
+    header p{
+        bottom: 5%;
+        font-size: 70px;
     }
+.pc_block h1, .pc_block nav ul{
+    color: #444;
+}
+    /** main */
+    /** menu */
+    #menu_button{
+        display: none;
+    }
+
+    #main{
+        width: 955px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /** menu End */
+
+    /** index.html */
+    .about_us_left img{
+        width: 30%;  
+        margin-left: 15%;      
+    } .about_us_right img{
+        width: 30%;
+        margin-right: 15%;
+    }
+    #about_aircraft img{
+        max-width: 25%;
+    }
+    #about_license_acquisition img{
+        max-width: 25%;
+    }
+    /** index.html End */
+
+    /** license.html */
+    #license_type{
+        width: 65%;
+    }
+
+    #permit_approval p{
+        width: 75%;
+    }
+    #permit_approval{
+        width: 955px;
+    }
+    #acquisiton_flow img{
+        max-width: 100%;
+    }
+    /** license.html End */
+
+    /** course_content.html */
+    #implementation_method table{
+        width: 580px;
+    }
+    #class_time table{
+        width: 550px;
+    }
+    /** course_content.html End */
+
+    /** course_fee.html */
+    #experienced_person ul{
+        width: 65%;
+    }
+    /** course_fee.html End */
+
+    /** main End */
+
+    /** footer */
+    .footer_rap{
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .footer_top, .footer_nav{
+        display: block;
+    }
+    #footer_font{
+        color: #FFF;
+    }
+    #footer a{
+        color: #FFF;
+    }
+    .footer_top{
+        float: left;
+        width: 170px;
+        margin-top: 5%;
+        margin-left: 5%;
+    }
+    .footer_nav{
+        font-size: 12px;
+    }
+    .footer_nav .nav_child{
+        float: left;
+        width: 100px;
+    }
+    .footer_nav ol{
+        width: 100px;
+        height: 200px;
+    } 
+    /** footer End */
+
 }
 /** 960px以上に適応　PC用 End */
 
