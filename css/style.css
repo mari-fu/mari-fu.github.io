@@ -338,7 +338,7 @@ h4{
     color: #FFF;
     bottom: 0;
 }
-.footer_top, .footer_nav{
+.footer_top, #footer_nav{
     display: none;
 }
 
@@ -576,12 +576,8 @@ h4{
     /** main End */
 
     /** footer */
-    .footer_rap{
-        width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .footer_top, .footer_nav{
+
+    .footer_top, #footer_nav{
         display: block;
     }
     #footer_font{
@@ -596,17 +592,52 @@ h4{
         margin-top: 5%;
         margin-left: 5%;
     }
-    .footer_nav{
-        font-size: 12px;
+    #footer_nav{
+        clear: left;
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16.5px;
     }
-    .footer_nav .nav_child{
+    #footer_nav ul li{
         float: left;
-        width: 100px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
-    .footer_nav ol{
+    #footer_nav ol li{
+        clear: left;
+        margin-top: 0px;
+        margin-bottom: 2.5px;
+        font-size: 14px;
+    }
+    #footer_nav ol{
+        margin-top: 10px;
+    }
+    #footer_about{
+        width: 200px;
+        margin-left: 30px;
+    }
+    #footer_license{
+        width: 225px;
+        margin-left: 30px;
+    }
+    #footer_course{
         width: 100px;
-        height: 200px;
-    } 
+        margin-left: 30px;
+    }
+    #footer_fee{
+        width: 170px;
+        margin-left: 30px;
+    }
+    #footer_address{
+        width: 70px;
+        margin-left: 30px;
+    }
+    
+    
+    #copy{
+        clear: left;
+    }
     /** footer End */
 
 }
