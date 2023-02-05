@@ -9,8 +9,19 @@
     </head>
 
     <body>
+        <!-- loading -->
+        <div class="loading">
+            <div class="circle"></div>
+            <p>loading</p>
+        </div>
+        <!-- loading End -->
+
         <header>
             <div id="top">
+                <div id="opening-ani">
+                    <div class="square1"></div>
+                    <div class="square2"></div>
+                </div>
                 <nav>
                     <h1><a href="index.html"><span class="top_font">登録講習機関</span><br>
                         ドローンエアサービス</a></h1>
@@ -23,31 +34,36 @@
                     </ul>
                 </nav>
                 
-                <p>TEXTTEXTTEXT<br>
-                    TEXTTEXTTEXT<br>
-                    TEXTTEXTTEXT
+                <p>As a <span class="emphasis">drone pilot</span><br>
+                    to the place<br>
+                    of the <span class="emphasis">business</span>
                 </p>
             </div>
         </header>
+
+
+
         <div id="menu">
             <div id="menu_button">
-                <p><a href="">MENU</a></p>
+                <p>MENU</p>
             </div>
             <div id="menu_list">
                 <ul>
-                    <li><a href="index.html#about_us">ドローンエアサービスとは</a></li>
+                    <li><a href="index.html#about_us" id="page-transition1">ドローンエアサービスとは</a></li>
                     <li><a href="license.html">ライセンスについて</a></li>
                     <li><a href="course_content.html">講習について</a></li>
                     <li><a href="course_fee.html">講習料</a></li>
-                    <li><a href="index.html#address">アクセス</a></li>
+                    <li><a href="index.html#address" id="page-transition2">アクセス</a></li>
                 </ul>
             </div>
         </div>
 
+
+
         <main id="main">
             <article>
 
-                <div id="about_us">
+                <div id="about_us" class="fade-in fade-in-up box">
                     <h2>ドローンエアサービスについて</h2>
                     <p class="describe">
                     ドローンエアサービスでは、航空業界の講師が講習をしています。<br>
@@ -63,15 +79,15 @@
 
                 </div>
                 
-                <section id="about_registraition_agencies">
-                    <h3>登録講習機関とは</h3>
+                <section id="about_registraition_agencies" class="fade-in fade-in-up box">
+                    <h3 class="anchor">登録講習機関とは</h3>
                     <p class="describe">
                         技能証明を取得するためのドローンの飛行に関する知識や操縦方法などの講習を実施する講習機関のことです。
                     </p>
                 </section>
 
-                <section id="about_aircraft">
-                    <h3>講習使用機体（全講習共通）</h3>
+                <section id="about_aircraft" class="fade-in fade-in-up box">
+                    <h3 class="anchor">講習使用機体（全講習共通）</h3>
                     <p class="describe">
                         DJIドローンの代名詞、Phantomシリーズを使用して講習と修了試験を行います。<br>
                         これからMavicシリーズや産業用、農業用ドローンを操縦される方でもPhantomでも基礎を学べば応用できます。
@@ -79,8 +95,8 @@
                     <img src="img/air_frame.jpg" alt="phantomシリーズの機体写真">
                 </section>
 
-                <section id="about_license_acquisition">
-                    <h3>操縦ライセンス取得には</h3>
+                <section id="about_license_acquisition" class="fade-in fade-in-up box">
+                    <h3 class="anchor">操縦ライセンス取得には</h3>
                     <p class="describe">
                         試験は国が指定する「指定試験機関」で学科試験、実地試験、身体検査を行います。また、事前に国の登録を受けた「登録講習機関」の講習及び実地試験を終了してから試験に臨むことも可能です。<br>
                         この場合、指定試験機関での実地試験は免除になります。
@@ -88,8 +104,8 @@
                     <img src="img/attend_course_3.jpg" alt="実機操縦中">
                 </section>
 
-                <section id="address">
-                    <h3>アクセス</h3>
+                <section id="address" class="fade-in fade-in-up box">
+                    <h3 class="anchor">アクセス</h3>
                     <p class="describe">&#12306;529-1663<br>
                     滋賀県蒲生郡日野町北脇２１４－７１<br>
                     <span class="googlemap"><a href="https://goo.gl/maps/YVqoeZmXwzFBWRM29">GOOGLE&nbsp;MAP</a></span></p>

@@ -18,27 +18,122 @@ img{
 
 /** リセットEnd */
 
-/** スマホ用（スマホファースト）*/
 
+/** loading */
+
+.loading {
+    position: fixed;
+    z-index: 100000000;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #fdfdfd;
+}
+.loading.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 500ms;
+}
+.loading .circle {
+    display: block;
+    position: relative;
+    top: calc( 50% - 20px );
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    border: 8px solid #FFF;
+    border-top: 7px solid #09f;
+    border-radius: 50px;
+    animation: loading 900ms linear 0ms infinite normal both;
+}
+@keyframes loading {
+    0% { transform: rotate( 0deg ); }
+    100% { transform: rotate( 360deg ); }
+}
+.loading p{
+    position: relative;
+    top: 50%;
+    text-align: center;
+    transform: translate(0,-50%);
+    font-weight: bold;
+}
+/** loading End */
+
+
+/** topオープニングアニメーション */
+
+
+/** topオープニングアニメーション End */
+
+
+/** h1 navフェードイン */
+.pagetop-fadein {
+	animation: fadein 4s forwards;
+}
+
+@keyframes fadein {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+/** h1 navフェードイン　End */
+/** topオープニングアニメーション End */
+
+
+/** スクロールするとフェードイン */
+.fade-in {
+    opacity: 0;
+    transition-duration: 1000ms;
+    transition-property: opacity, transform;
+}
+
+.fade-in-up {
+    transform: translate(0, 50px);
+}
+.scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/** スクロールするとフェードイン End*/
+
+/** ページ遷移後フェードイン */
+.pagetop-fadein {
+	animation: fadein 4s forwards;
+}
+
+@keyframes fadein {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+/** ページ遷移後フェードイン　End */
+
+
+
+
+
+/** スマホ用（スマホファースト）*/
 /** header */
 
 #top a{
-    color: #FFF;
+    color: #fff;
 }
 
 h1{
     position: absolute;
-    top: 10%;
+    top: 5%;
     left: 10%;
     font-size: 18px;
 }
 #top .top_font{
     font-size: 14px;
-    color: #FFF;
+    color: #fff;
 }
 nav ul{
     position: absolute;
-    top: 20%;
+    top: 15%;
     right: 10%;
     text-align: right;
 }
@@ -49,16 +144,18 @@ nav ul li{
 header p{
     position: absolute;
     bottom: 10%;
-    color: #DDD;
+    color: #fff;
     font-size: 36px;
     font-weight: bold;
 }
-
+header p .emphasis{
+    color: #f00;
+}
 #top{
     background-image: url(../img/top_before.jpg);
     background-size: cover;
     background-position: center;
-    height: 95vh;
+    height: 100vh;
 
 }
 /** header End */
@@ -69,37 +166,53 @@ header p{
     position: fixed;
     bottom: 3%;
     right: 3%;
-    background-color: #05D;
+    background-color: #05d;
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    z-index: 10000000;
 }
-#menu_button a{
-    color: #FFF;
+#menu_button p{
+    color: #fff;
     padding-top: 30%;
     text-align: center;
-    width: 60px;
-    height: 60px;
     display: block;
     border-radius: 50%;
 }
 #menu_list{
-    display: none;
+
     position: fixed;
-    width: 210px;
-    bottom: 13%;
-    right: 2%;
-    background-color: #444;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    background-color: #555;
+    opacity: 0.9;
+    z-index: 100000;
+}
+#menu_list ul{
+    height: 100%;
 }
 #menu_list ul li{
-    padding-right: 5%;
+    border-bottom: solid 2px #222;
+    height: 20%;
 }
 #menu_list a{
-    width: 100%;
-    padding-top: 10%;
     display: block;
-    text-align: right;
-    color: #FFF;
+    height: 100%;
+    line-height: 10;
+    text-align: center;
+    color: #fff;
+}
+
+
+#menu_list{
+    transform: translateX(100vw);
+    transition: all .3s linear;
+}
+  /* アニメーション後のメニューの状態 */
+#menu_list.is-active{
+    transform: translateX(0);
 }
 
 /** menu End */
@@ -293,7 +406,7 @@ h4{
 }
 .attention{
     background-color: #444;
-    color: #FFF;
+    color: #fff;
 }
 #course_fee table{
     font-size: 12px;
@@ -346,20 +459,33 @@ h4{
 
 /** 768px以下　スマホ用 End */
 
+
+
+
+
+
+
 /** 768px以上960px以下に適応　タブレット用*/
 @media screen and (min-width:768px) {
+    /** menu */
+
+    #menu_list a{
+        font-size: 18px;
+    }
+    /** menu End */
+
     /** header */
     h1{
+        font-size: 28px;
+    }
+    #top .top_font{
         font-size: 24px;
     }
-    .top_font{
-        font-size: 20px;
-    }
     nav ul{
-        top: 30%;
+        top: 25%;
     }
     nav ul li{
-        font-size: 20px;
+        font-size: 24px;
     }
     header p{
         font-size: 50px;
@@ -386,7 +512,7 @@ h4{
         width: 80px;
         height: 80px;
     }
-    #menu_button a{
+    #menu_button p{
         width: 80px;
         height: 80px;
         font-size: 1.2em;
@@ -463,38 +589,53 @@ h4{
 }
 /** 768px以上に適応　タブレット用 End */
 
+
+
+
+
+
+
 /** 960px以上に適応　PC用*/
 @media screen and (min-width:960px) {
-    .pc_block{
-        display: flex;
-        background-image: none;
-    }
-    .pc_block nav{
-        height: 40px;
-    }
+
     #top{
         height: 100vh;
     }
-    header nav{
+    #top nav{
+        position: fixed;
         width: 959px;
-        margin-left: auto;
-        margin-right: auto;
+        height: 80px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        z-index: 100000;
     }
+    .pc_block{
+        display: block;
+        position: fixed;
+        width: 959px;
+        height: 80px;  
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        background-color: #fff;
+        z-index: 10000;
+    }
+
     h1{
         position: static;
         width: 19%;
         float: left;
         top: auto;
         left: auto;
-        margin-top: 3%;
+        margin-top: 2%;
         margin-left: 3%;
         font-size: 1.1rem;
     }
 
     nav ul{
         position: static;
-        width: 78%;
-        float: right;
+        float: left;
         top: auto;
         right: auto;
         text-align: center;
@@ -515,7 +656,7 @@ h4{
 }
     /** main */
     /** menu */
-    #menu_button{
+    #menu_button, #menu_list{
         display: none;
     }
 
@@ -577,14 +718,17 @@ h4{
 
     /** footer */
 
+    #footer{
+        padding-bottom: 20px;
+    }
     .footer_top, #footer_nav{
         display: block;
     }
     #footer_font{
-        color: #FFF;
+        color: #fff;
     }
     #footer a{
-        color: #FFF;
+        color: #fff;
     }
     .footer_top{
         float: left;
@@ -607,7 +751,7 @@ h4{
     #footer_nav ol li{
         clear: left;
         margin-top: 0px;
-        margin-bottom: 2.5px;
+        margin-bottom: 10px;
         font-size: 14px;
     }
     #footer_nav ol{
@@ -633,8 +777,13 @@ h4{
         width: 70px;
         margin-left: 30px;
     }
-    
-    
+    /*アンカーリンク遷移後表示位置*/
+    .anchor {
+        display: block;
+        padding-top: 120px;
+        margin-top: -10px;
+    }
+    /*アンカーリンク遷移後表示位置　End*/
     #copy{
         clear: left;
     }
