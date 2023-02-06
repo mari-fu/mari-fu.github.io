@@ -9,19 +9,20 @@ window.addEventListener( 'load', () => {
 /** loading End */
 
 
+
 /**index.html オープニング動作 */
 
+
+//cssのみで作成
+
+
 /**index.html オープニング動作　End */
-document.querySelector(`opening-ani`).animate(
-	[
-		{ transform: 'translateX(0)' },
-		{ transform: 'translateX(8000px)' }
-	],
-	{
-		duration: 3000,
-		iterations: Infinity
-	}
-);
+
+
+
+
+
+
 /** スクロールするとフェードイン */
 
 let fadeInTarget = document.querySelectorAll('.fade-in');
