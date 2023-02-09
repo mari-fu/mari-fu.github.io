@@ -8,7 +8,16 @@ window.addEventListener( 'load', () => {
 
 /** loading End */
 
+/**スマホ・タブレット画面高さ取得 アドレスバー対処 */
 
+function setHeight() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+setHeight();
+
+window.addEventListener('resize', setHeight);
+/**スマホ・タブレット画面高さ取得 */
 
 /**index.html オープニング動作 */
 //動作cssのみで作成
@@ -35,7 +44,6 @@ window.addEventListener("scroll",()=>{
 })
 
 /**MENUボタン　スクロールしたらフェードインフェードアウト */
-
 
 /** スクロールするとフェードイン */
 

@@ -262,7 +262,7 @@ nav ul li{
     bottom: 10%;
     font-size: 36px;
     font-weight: bold;
-    
+    margin-left: 5%;
 }
 #catchphrase li{
     color: #fff;
@@ -271,11 +271,17 @@ nav ul li{
     color: #f00;
 }
 #top{
+    height: 100vh;
+
+}
+#top-image{
     background-image: url(../img/top_before.jpg);
     background-size: cover;
     background-position: center;
     width: 95%;
     height: 80vh;
+    /*jsでアドレスバーの高さを引いた画面サイズにリサイズ*/
+    height: calc(var(--vh, 1vh) * 80);
     margin-left: auto;
     margin-right: auto;
     margin-top: 15vh;
@@ -315,6 +321,8 @@ nav ul li{
     position: fixed;
     width: 100vw;
     height: 100vh;
+    /*jsでアドレスバーの高さを引いた画面サイズにリサイズ*/
+    height: calc(var(--vh, 1vh) * 100);
     bottom: 0;
     right: 0;
     background-color: #555;
@@ -331,7 +339,7 @@ nav ul li{
 #menu_list a{
     display: block;
     height: 100%;
-    line-height: 10;
+    padding: 10% 0;
     text-align: center;
     color: #fff;
 }
