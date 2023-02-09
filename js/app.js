@@ -11,16 +11,30 @@ window.addEventListener( 'load', () => {
 
 
 /**index.html オープニング動作 */
-
-
-//cssのみで作成
+//動作cssのみで作成
 
 
 /**index.html オープニング動作　End */
 
+/**MENUボタン　スクロールしたらフェードインフェードアウト */
+let menuButton = document.getElementById('menu_button');
+window.addEventListener("scroll",()=>{
+    
+    const currentY = window.scrollY;//スクロール高さ取得
+    if(currentY > 300){
+        setTimeout(function(){
+            menuButton.style.opacity = 1;
+        },1);
+        menuButton.classList.remove('menu_button-hide');
+    } else {
+        setTimeout(function(){
+            menuButton.style.opacity = 0;
+        },1);
+        menuButton.classList.add('menu_button-hide');
+    }
+})
 
-
-
+/**MENUボタン　スクロールしたらフェードインフェードアウト */
 
 
 /** スクロールするとフェードイン */
@@ -29,7 +43,7 @@ let fadeInTarget = document.querySelectorAll('.fade-in');
 window.addEventListener('scroll', () => {
     for (let i = 0; i < fadeInTarget.length; i++){
         const rect = fadeInTarget[i].getBoundingClientRect().top;
-        const scroll = window.pageYOffset || document.documentElement.scrollTop;
+        const scroll = window.scrollY || document.documentElement.scrollTop;
         const offset = rect + scroll;
         const windowHeight = window.innerHeight; // 現在のブラウザの高さ
         if (scroll > offset - windowHeight + 150) {

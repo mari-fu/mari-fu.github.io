@@ -2,9 +2,19 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1,user-scalable=no">
-
+        <meta property="og:url" content=" ページの URL" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content=" DroneAirService" />
+        <meta property="og:description" content="サイトの説明文" />
+        <meta property="og:site_name" content="ドローンエアサービス" />
+        <meta property="og:image" content="img/top_after.jpg" />
+        <meta name="twitter:card" content="sammary" />
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="js/include.js"></script>
+        <meta name="description" content="サイトの説明文">
         <title>ドローンエアサービス</title>
     </head>
 
@@ -21,18 +31,24 @@
                 <div class="opening-ani">
                     <img src="img/top_ani_drone.png" id="drone">
                 </div>
-                <nav>
-                    <h1><a href="index.html"><span class="top_font">登録講習機関</span><br>
-                        ドローンエアサービス</a></h1>
-                    <ul>
-                        <li><a href="index.html#about_us">ドローンエアサービスとは</a></li>
-                        <li><a href="license.html">ライセンスについて</a></li>
-                        <li><a href="course_content.html">講習について</a></li>
-                        <li><a href="course_fee.html">講習料</a></li>
-                        <li><a href="index.html#address">アクセス</a></li>
-                    </ul>
-                </nav>
                 
+                <div id="header-nav">
+                    <!--headernav要素があった部分-->
+                    <div>
+                        <nav>
+                            <h1><a href="index.html"><span class="top_font">登録講習機関</span><br>
+                                ドローンエアサービス</a></h1>
+                            <ul>
+                                <li><a href="index.html#about_us">ドローンエアサービスとは</a></li>
+                                <li><a href="license.html">ライセンスについて</a></li>
+                                <li><a href="course_content.html">講習について</a></li>
+                                <li><a href="course_fee.html">講習料</a></li>
+                                <li><a href="index.html#address">アクセス</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
                 <div id="catchphrase">
                     <ul>
                         <li>As a <span class="emphasis">drone pilot</span></li>
@@ -46,11 +62,12 @@
 
 
         <div id="menu">
-            <div id="menu_button">
+            <div id="menu_button" class="menu_button-hide">
                 <p>MENU</p>
             </div>
             <div id="menu_list">
                 <ul>
+                    <li><a href="index.html">TOP</a></li>
                     <li><a href="index.html#about_us" id="page-transition1">ドローンエアサービスとは</a></li>
                     <li><a href="license.html">ライセンスについて</a></li>
                     <li><a href="course_content.html">講習について</a></li>
@@ -65,23 +82,25 @@
         <main id="main">
             <article>
 
-                <div id="about_us" class="fade-in fade-in-up box">
-                    <h2>ドローンエアサービスについて</h2>
-                    <p class="describe">
-                    ドローンエアサービスでは、航空業界の講師が講習をしています。<br>
-                    航空のいろはが学べますので学科試験や飛行についての実機の操縦テクニックなど学んで頂けます。
-                    </p>
-                    
+                <div id="about_us">
+                    <div class="fade-in fade-in-up box">
+                        <h2>ドローンエアサービスについて</h2>
+                        <p class="describe">
+                        ドローンエアサービスでは、航空業界の講師が講習をしています。<br>
+                        航空のいろはが学べますので学科試験や飛行についての実機の操縦テクニックなど学んで頂けます。
+                        </p>
+                    </div>
+                    <div class="fade-in fade-in-up box">
                         <div class="about_us_left">
                             <img src="img/attend_course_1.jpg" alt="屋外で講習中の写真">
                         </div>
                         <div class="about_us_right">
                             <img src="img/attend_course_2.jpg" alt="屋内で講習中の写真">
                         </div>
-
+                    </div>
                 </div>
                 
-                <section id="about_registraition_agencies" class="fade-in fade-in-up box">
+                <section id="about_registraition_agencies" >
                     <h3 class="anchor">登録講習機関とは</h3>
                     <p class="describe">
                         技能証明を取得するためのドローンの飛行に関する知識や操縦方法などの講習を実施する講習機関のことです。
