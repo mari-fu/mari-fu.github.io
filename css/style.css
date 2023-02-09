@@ -138,7 +138,7 @@ img{
     }
 }
 
-#catchphrase ul li:nth-child(1){
+#catchphrase ul .flipup1{
     perspective-origin: bottom center;
     animation: flipupAni 2s forwards 2s ease-in;
     opacity: 0;
@@ -155,8 +155,7 @@ img{
         opacity: 1;
     }
 }
-#catchphrase ul li:nth-child(2),
-#catchphrase ul li:nth-child(3){
+#catchphrase ul .flipup2{
     perspective-origin: bottom center;
     animation: flipupAni 2s forwards 1.5s ease-in;
     opacity: 0;
